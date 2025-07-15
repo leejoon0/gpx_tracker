@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'welcome.css')}}">
+ 	<link rel="stylesheet" type="text/css" href="/static/welcome.css">
+</head>
+<body>
+<div class="main">
+	<div>
+		<table id="table">
+			{% for dict in gpx %}
+			<tr>
+				{% for key, value in dict.items() %}
+					{% if key == 'gpxFilePath' %}
+					<td><a href="/iframe/{{ value.replace('/','|') }}" target="_blank">{{ value }}</a></td>
+					{% endif %}
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+</body>
+</html>

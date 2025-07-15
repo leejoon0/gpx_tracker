@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello, Flask</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    </head>
+    <body>
+		{{ iframe|safe }}
+      <div>
+        <span>{{ total_time }}</span>
+      </div>
+    </body>
+</html>

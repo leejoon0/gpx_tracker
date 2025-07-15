@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello, Flask</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    </head>
+    <body>
+		<form action="/register" method="POST" enctype='multipart/form-data'>
+		  <div class="form-group">
+			  <label>GPX File Upload</label>
+			  <div class="input-group">
+				  <span class="input-group-btn">
+					  <span class="btn btn-default btn-file">
+						<button class="btn btn-success">Browse…</button>
+						  <input type="file" id="imgInp" name="file">
+					  </span>
+				  </span>
+				  <input type="text" class="form-control" readonly>
+			  </div>
+			  <img id='img-upload' style="margin-top: 10px;"/>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+        <!-- <div><img src='{{ tracker_route }}' /></div>
+        <div><img src='{{ tracker_altitude }}' /></div> -->
+    </body>
+</html>
